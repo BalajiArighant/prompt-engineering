@@ -7,7 +7,7 @@ Quick demo app to practice Prompt Engineering and see how well your prompts perf
 ## 🚀 Tech Stack
 - FastAPI (Backend)
 - Streamlit (Frontend)
-- Hugging Face Transformers (Local GPT-2 model)
+- Mistral AI (via API)
 - Docker & Docker Compose
 
 ---
@@ -16,16 +16,22 @@ Quick demo app to practice Prompt Engineering and see how well your prompts perf
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/your-repo/prompt-scorer.git
-    cd prompt-scorer
+    git clone https://github.com/BalajiArighant/prompt-engineering.git
+    cd prompt-engineering
     ```
 
-2. **Run using Docker Compose**
+2. **Create a `.env` file**
+    ```env
+    API_URL=http://localhost:8000/evaluate
+    MISTRAL_API_KEY=your_mistral_api_key_here
+    ```
+
+3. **Run using Docker Compose**
     ```bash
     docker-compose up --build
     ```
 
-3. **Access the apps**
+4. **Access the apps**
     - API: [http://localhost:8000](http://localhost:8000)
     - Frontend: [http://localhost:8501](http://localhost:8501)
 
@@ -33,7 +39,7 @@ Quick demo app to practice Prompt Engineering and see how well your prompts perf
 
 ## 🎯 Features
 - Score your prompts based on basic good practices
-- Get an actual AI's generated response (locally, no API key needed)
+- Get an actual AI's generated response from Mistral AI
 - Visual feedback and improvement suggestions
 
 ---
