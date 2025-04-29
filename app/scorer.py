@@ -30,8 +30,8 @@ def evaluate_prompt(prompt: str) -> dict[str, str]:
     response = requests.post(MISTRAL_API_URL, headers=headers, json=payload)
     if response.status_code == 200:
         result = response.json()
-        score = result["choices"][0]["message"]["content"][:4]
-        feedback = result["choices"][0]["message"]["content"][5:]
+        score = result["choices"][0]["message"]["content"][:1]
+        feedback = result["choices"][0]["message"]["content"][2:]
         
         print("Score: ", score)
         logger.info("Score: %s", score)

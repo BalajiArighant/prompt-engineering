@@ -17,8 +17,9 @@ if st.button("Evaluate Prompt"):
                 st.success(f"Score: {result['score']}/10")
                 if result['feedback']:
                     st.subheader("Feedback")
-                    for fb in result['feedback']:
-                        st.write(f"- {fb}")
+                    # for fb in result['feedback']:
+                    #     st.write(f"- {fb}")
+                    st.write(result["feedback"])
                 st.subheader("AI's Response")
                 st.code(result['ai_response'])
             else:

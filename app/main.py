@@ -43,6 +43,8 @@ def get_ai_response(prompt: str) -> str:
         logger.info("AI Response: %s", result["choices"][0]["message"]["content"])
         print(result["choices"][0]["message"]["content"])
         return result["choices"][0]["message"]["content"]
+    else:
+        logger.error("AI Response %s", response)
     return "Failed to get AI response."
 
 @app.post("/evaluate")
